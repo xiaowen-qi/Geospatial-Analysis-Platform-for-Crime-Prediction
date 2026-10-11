@@ -1,0 +1,19 @@
+# Generated results
+outputs/
+risk_ranking*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Large or private inputs you may keep locally
+*.osm.pbf
+private_data/

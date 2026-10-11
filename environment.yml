@@ -1,0 +1,23 @@
+# Conda environment for both UIs.
+#   conda env create -f environment.yml
+#   conda activate crime-prediction
+# conda-forge is used because it ships consistent GDAL / PROJ / Qt binaries.
+name: crime-prediction
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pyqt=5.15            # GUI (both UIs)
+  - geopandas>=0.14      # spatial I/O + overlays
+  - pyogrio              # fast vector-file engine used by geopandas
+  - shapely>=2.0
+  - pyproj>=3.4
+  - pandas>=2.0          # format="mixed" date parsing needs pandas 2
+  - numpy
+  - matplotlib           # embedded map canvas (census UI)
+  - folium               # interactive HTML maps (census UI)
+  - scikit-learn>=1.2    # models (crime UI)
+  - openpyxl             # .xlsx crime files
+  - xlrd                 # legacy .xls crime files
+  # Optional - only needed for tools/osm_poi_extract.py:
+  # - pyrosm

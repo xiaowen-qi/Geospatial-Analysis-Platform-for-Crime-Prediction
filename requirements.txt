@@ -1,0 +1,17 @@
+# pip alternative to environment.yml (Python >= 3.10; tested on 3.10 and 3.11):
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+PyQt5>=5.15,<6
+geopandas>=0.14
+pyogrio>=0.7
+shapely>=2.0
+pyproj>=3.4
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+folium>=0.14
+scikit-learn>=1.2
+openpyxl>=3.1
+xlrd>=2.0
+# Optional, only for tools/osm_poi_extract.py:
+# pyrosm>=0.6
